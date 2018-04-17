@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 6 Partie 4 ANGULARJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="testCtrl">
+    <div>
+      <p ng-hide="hideMe">Niveau matériel, donc, c’est différent. Du temps des PowerPC, les PowerPC G3 et G4 (32 bits) cohabitaient avec les PowerPC G5 (64 bits). Lors du passage aux puces Intel, les premières générations utilisaient une puce 32 bits,
+      le Core Duo (Core Solo dans le Mac mini) et seul le Mac Pro a été livré d’office avec un processeur 64 bits. La seconde génération, en Core 2 Duo, offrait par contre bien le support du 64 bits.</p>
+      <p ng-hide="hideIt">Apple a déjà commencé à tuer le 32 bits avec Lion puis Mountain Lion : le premier imposait un CPU 64 bits (pour les applications), le second un noyau 64 bits (et donc les pilotes correspondants, ainsi que l’EFI).
+      Mais la compatibilité avec les applications 32 bits, elle, restait.</p>
+      <button type="button" name="button" ng-click="hideMe=true; hideIt=false">Cacher 1 Afficher 2</button>
+      <button type="button" name="button" ng-click="hideMe=false; hideIt=true">Cacher 2 Afficher 1</button>
+    </div>
+  </body>
+  <script>
+  var testApp = angular.module('app',[]);
+  testApp.controller('testCtrl', function($scope){
+  });
+  </script>
+</html>
